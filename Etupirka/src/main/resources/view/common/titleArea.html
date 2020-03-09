@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+    <header th:fragment="titleArea()">
+        <a class="title_area" th:href="@{/login}">Etupirka</a>
+        <div class="user_info_area" th:if="${@userInfo.isLogin()}">
+            <div class="user_info">
+                <div th:text="${@userInfo.userData.affiliation}"></div>
+                <div th:text="${@userInfo.userData.userName}"></div>
+            </div>
+            <button>マニュアル</button>
+        </div>
+    </header>
+</body>
+</html>

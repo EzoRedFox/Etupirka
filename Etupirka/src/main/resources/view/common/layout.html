@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:th="http://www.thymeleaf.org"
+    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<meta charset="UTF-8">
+<link href="/css/common/lauout.css" th:href="@{/css/common/layout.css}"
+    rel="stylesheet"></link>
+<link href="/css/common/lauout.css" th:href="@{/css/common/parts.css}"
+    rel="stylesheet"></link>
+<title th:text="${@viewManager.viewTitle}">Insert title here</title>
+</head>
+<body>
+    <header th:replace="common/titleArea::titleArea()"></header>
+    <nav th:replace="common/naviArea::naviAria()"></nav>
+    <div th:replace="common/messageArea::messageArea()"></div>
+    <form th:attr="action=${@viewManager.viewId}" method="post">
+        <div th:replace="common/buttonArea::buttonArea()"></div>
+        <div th:replace="common/searchArea::searchArea()"></div>
+
+        <div class="contentsArea">
+            <div layout:fragment="contents"></div>
+        </div>
+    </form>
+</body>
+</html>

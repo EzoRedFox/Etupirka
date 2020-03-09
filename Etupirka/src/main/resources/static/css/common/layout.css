@@ -1,0 +1,165 @@
+@charset "UTF-8";
+
+/* ------------------------------------------------------------ */
+/* ■共通
+/* ------------------------------------------------------------ */
+*, *:before, *:after {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background-color: #ffffff;
+    font-size: 12px;
+    font-family: Verdana, "Verdana CE", Arial, "Arial CE",
+        "Lucida Grande CE", lucida, "Helvetica CE", sans-serif;
+    color: #000000;
+    min-height: 500px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* ------------------------------------------------------------ */
+/* ■ヘッダー領域
+/* ------------------------------------------------------------ */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; background : linear-gradient( 6deg, #ff6600
+    14px, #FFFFFF 20px);
+    height: 40px;
+    width: 100%;
+    border-bottom: 1px solid #ff6600;
+    background: linear-gradient(6deg, #ff6600 14px, #FFFFFF 20px);
+}
+
+header .title_area {
+    display: inline-block;
+    color: #500000;
+    font-size: 24px;
+    padding-left: 24px;
+    padding-right: 24px;
+    min-width: 160px;
+}
+
+header .user_info_area {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+header .user_info_area .user_info {
+    min-width: 160px;
+    text-align: right;
+    margin-right: 24px;
+}
+
+
+/* ------------------------------------------------------------ */
+/* ■ナビ領域
+/* ------------------------------------------------------------ */
+nav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 24px;
+    width: 100%;
+    border-bottom: 1px solid #C0C0C0;
+    padding-left: 24px;
+}
+
+nav span {
+    display: inline-block;
+    margin-right: 8px;
+}
+
+nav span:before {
+    content: " ＞ ";
+    "
+}
+
+nav span:first-child:before {
+    content: "";
+}
+
+/* ------------------------------------------------------------ */
+/* ■メッセージ領域
+/* ------------------------------------------------------------ */
+div.messageArea {
+    height: 48px;
+    overflow-y: auto;
+    width: 100%;
+    border-bottom: 1px solid #C0C0C0;
+    padding-left: 48px;
+}
+
+/* ------------------------------------------------------------ */
+/* ■ボタン領域
+/* ------------------------------------------------------------ */
+div.buttonArea {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 40px;
+    width: 100%;
+    border-bottom: 1px solid #C0C0C0;
+    padding-left: 24px;
+
+}
+
+
+/* ------------------------------------------------------------ */
+/* ■検索領域
+/* ------------------------------------------------------------ */
+div.searchArea {
+    width: 100%;
+    padding-left: 24px;
+    border-bottom: 1px solid #C0C0C0;
+    padding-top: 4px;
+    padding-bottom: 4px;
+
+}
+
+div.searchItemArea {
+    display: flex;
+    justify-content: flex-start;
+    align-items: top;
+
+}
+
+div.searchItem {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 8px;
+    margin-bottom: 8px;
+
+}
+
+div.searchItem .searchItemTitle {
+    width: 96px;
+    text-align: right;
+    margin-right: 8px;
+}
+
+div.searchItem .searchItemTitle:after {
+    content: " : ";
+}
+
+div.searchItem .searchItemValue {
+    width: 128px;
+
+}
+
+
+/* ------------------------------------------------------------ */
+/* ■明細領域
+/* ------------------------------------------------------------ */
+div.contentsArea {
+    width: 100%;
+    padding-left: 24px;
+    padding-top: 16px;
+
+}
+

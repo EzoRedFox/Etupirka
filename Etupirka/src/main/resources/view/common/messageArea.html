@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+    <div class="messageArea" th:fragment="messageArea()" th:if="${@viewManager.messageArea.hasErrorMessage()}">
+        <div th:each="message : ${@viewManager.messageArea.errorMessageList}" th:text="${message}"></div>
+    </div>
+    <div class="messageArea" th:fragment="messageArea()" th:if="${@viewManager.messageArea.hasMessage()}">
+        <div th:each="message : ${@viewManager.messageArea.messageList}" th:text="${message}"></div>
+    </div>
+</body>
+</html>

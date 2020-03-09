@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:th="http://www.thymeleaf.org"
+    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+    layout:decorate="~{common/layout}">
+<body>
+    <div layout:fragment="contents">
+        <div class="login_area">
+            <div class="input_line">
+                <div class="title_image_column"></div>
+                <div class="input_column"><input type="text" th:field="${contentsData.userId}"/></div>
+            </div>
+            <div class="input_line">
+                <div class="title_image_column"></div>
+                <div class="input_column"><input type="password" th:field="${contentsData.password}"/></div>
+            </div>
+            <div><button type="submit" name="login" >ログイン</button></div>
+        </div>
+    </div>
+</body>
+</html>

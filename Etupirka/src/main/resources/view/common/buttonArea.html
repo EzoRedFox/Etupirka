@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+    <div class="buttonArea" th:fragment="buttonArea()" th:if="${@viewManager.buttonArea.showFlag}">
+        <button type="submit" th:each="actionButton : ${@viewManager.buttonArea.buttonList}" th:attr="name=${actionButton.actionName},value=${actionButton.actionName}" th:text="${actionButton.buttonName}"></button>
+    </div>
+
+</body>
+</html>

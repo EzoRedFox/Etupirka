@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+    <nav th:fragment="naviAria()">
+        <span th:each="viewName, listStat : ${@viewManager.historyViewNameList}" >
+            <a th:href="@{/transition/historyBack(historyIndex=${listStat.index})}" th:text="${viewName}"></a>
+        </span>
+    </nav>
+</body>
+</html>
