@@ -1,25 +1,19 @@
 package com.poronitay.etupirka.common.web.view.data;
 
-import com.poronitay.etupirka.common.web.view.ViewArea;
+import lombok.Data;
 
-import lombok.Getter;
-
+@Data
 public class ViewData {
 
-    @Getter
     private final String viewId;
 
-    @Getter
-    private final String viewName;
+    private final String viewTitle;
 
-    @Getter
-    private final ViewArea viewArea;
+    private final boolean onMenuLink;
 
-    public ViewData(String viewId, String viewName) {
+    public ViewData(String viewId, String viewTitle, boolean onMenuLink) {
         this.viewId = viewId;
-        this.viewName = viewName;
-        viewArea = new ViewArea(viewId);
+        this.viewTitle = viewTitle;
+        this.onMenuLink = onMenuLink;
     }
-
-
 }

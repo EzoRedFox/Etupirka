@@ -8,6 +8,8 @@
     rel="stylesheet"></link>
 <link href="/css/common/lauout.css" th:href="@{/css/common/parts.css}"
     rel="stylesheet"></link>
+<link href="/css/common/lauout.css" th:href="@{/css/__${@viewManager.viewId}__.css}"
+    rel="stylesheet"></link>
 <title th:text="${@viewManager.viewTitle}">Insert title here</title>
 </head>
 <body>

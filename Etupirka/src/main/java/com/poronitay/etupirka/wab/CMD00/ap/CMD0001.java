@@ -2,16 +2,17 @@ package com.poronitay.etupirka.wab.CMD00.ap;
 
 import org.springframework.stereotype.Service;
 
-import com.poronitay.etupirka.common.web.user.UserData;
-
 @Service
 public class CMD0001 {
 
-    public UserData getUserData(String userID) {
+    /**
+     * 指定したユーザID、パスワードが正しいかをチェックする
+     * @param userID
+     * @param password
+     * @return true:ユーザID、パスワードの検証OK
+     */
+    public boolean checkUserIdPassword(String userID, String password) {
 
-        UserData user = new UserData();
-        user.setUserName(userID + "太郎");
-        user.setAffiliation(userID + "第１課テスト係：主任");
-        return user;
+        return true;
     }
 }

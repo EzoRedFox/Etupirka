@@ -1,5 +1,10 @@
 package com.poronitay.etupirka.common.util;
 
+/**
+ * 時間計測
+ * @author Matsu
+ *
+ */
 public class TimeWatch {
 
     private final long startTime;

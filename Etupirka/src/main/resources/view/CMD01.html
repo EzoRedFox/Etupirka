@@ -9,7 +9,19 @@
 </head>
 <body>
     <div layout:fragment="contents">
+        <div class="link_area">
+            <div class="link_category" th:each="category : ${contentsData.menuList}">
+                <div class="category_title" th:text="${category.categoryName}"></div>
+                <ul>
+                    <li th:each="menuLink : ${category.viewList}">
+                        <a th:href="@{/transition/nextView(viewId=${menuLink.viewId})}" th:text="${menuLink.viewTitle}"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="info_area">
 
+        </div>
     </div>
 </body>
 </html>

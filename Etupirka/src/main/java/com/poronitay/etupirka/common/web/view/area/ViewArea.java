@@ -1,4 +1,4 @@
-package com.poronitay.etupirka.common.web.view;
+package com.poronitay.etupirka.common.web.view.area;
 
 import com.poronitay.etupirka.common.web.view.area.button.ButtonArea;
 import com.poronitay.etupirka.common.web.view.area.message.MessageArea;
